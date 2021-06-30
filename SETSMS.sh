@@ -34,17 +34,15 @@ function Dependencies {
 		RUTA=$(pwd)
 	else
 		echo -e "${rojo}Archivos faltantes..."
-		echo -e "Reparando..."${negro}
+		echo -e "Para reparar reinstale el producto"${negro}
 		rm -rf ISHSHELL-IOS-SMS/
-		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 	if [ -x ${PWD}/Impulse ]; then
 		RUTA=$(pwd)
 	else
 		echo -e "${rojo}Archivos faltantes..."
-		echo -e "Reparando..."${negro}
+		echo -e "Para reparar reinstale el producto"${negro}
 		rm -rf ISHSHELL-IOS-SMS/
-		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 }
 #
