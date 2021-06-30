@@ -97,6 +97,7 @@ read
 # Llamando a las Herramientas Quack e Impulse
 #
 function SendSMS {
+RUTA=$(pwd)
 cd ${RUTA}/quack
 python3 quack --tool SMS --target ${PHONE} --threads 60 --timeout 90
 cd ${RUTA}/Impulse
