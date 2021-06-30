@@ -33,15 +33,15 @@ function Dependencies {
 	if [ -x ${PWD}/quack ]; then
 		RUTA=$(pwd)
 	else
-		${blanco}Archivos faltantes...
-		${blanco}Reparando...
+		echo -e "${blanco}Archivos faltantes..."
+		echo -e "Reparando..."
 		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 	if [ -x ${PWD}/Impulse ]; then
 		RUTA=$(pwd)
 	else
-		${blanco}Archivos faltantes...
-		${blanco}Reparando...
+		echo -e "${blanco}Archivos faltantes..."
+		echo -e "Reparando..."
 		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 }
