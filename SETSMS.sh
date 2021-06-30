@@ -24,19 +24,20 @@ function Dependencies {
 
 	echo -e ${rojo}"Ejecutar: 1"
 	echo -e "Instalar: 2"
-	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"${negro}
+	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"
 	read -r INSTALACION
+	${negro}
 	
 	if [[ ${INSTALACION} == 1 || ${INSTALACION} == 01 ]]; then
 	
-	echo -e ${rojo}"Iniciando..."		
+	echo -e ${rojo}"Iniciando..."${negro}	
 	elif [[ ${INSTALACION} == 2 || ${INSTALACION} == 02 ]]; then
 		
 		apk update && apk upgrade
 		apk add python3
 		apk add py3-pip
 	else
-	echo -e "Saludos!!"
+	echo -e ${rojo}"Saludos!!"${blanco}
 	exit
 	fi
 }
@@ -94,6 +95,7 @@ read -r OPTION
 sleep 0.5
 
 if [[ ${OPTION} == 0 || ${OPTION} == 00 ]]; then
+${blanco}
 exit
 elif [[ ${OPTION} == 1 || ${OPTION} == 01 ]]; then
 source ${RUTA}/tools/target.sh
