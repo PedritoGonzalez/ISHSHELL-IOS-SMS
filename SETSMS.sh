@@ -25,9 +25,9 @@ function Dependencies {
 	echo -e ${rojo}"Ejecutar: 1"
 	echo -e "Instalar: 2"
 	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"
-	echo -e ""${blanco}
+	echo -e -n ""${blanco}
 	read -r INSTALACION
-	echo -e ""${negro}
+	echo -e -n ""${negro}
 	
 	if [[ ${INSTALACION} == 1 || ${INSTALACION} == 01 ]]; then
 	
@@ -96,7 +96,7 @@ read -r OPTION
 sleep 0.5
 
 if [[ ${OPTION} == 0 || ${OPTION} == 00 ]]; then
-echo -e "" ${blanco}
+echo -e -n "" ${blanco}
 exit
 elif [[ ${OPTION} == 1 || ${OPTION} == 01 ]]; then
 source ${RUTA}/tools/target.sh
