@@ -30,14 +30,14 @@ function Dependencies {
 		apk add python3
 		apk add py3-pip
 	fi
-	if [ -x ${PWD}/quack ]; then
+	if [ -x ${pwd}/quack ]; then
 		RUTA=$(pwd)
 	else
 		echo -e "${rojo}Archivos faltantes..."
 		echo -e "Para reparar reinstale el producto"${negro}
 		rm -rf ISHSHELL-IOS-SMS/
 	fi
-	if [ -x ${PWD}/Impulse ]; then
+	if [ -x ${pwd}/Impulse ]; then
 		RUTA=$(pwd)
 	else
 		echo -e "${rojo}Archivos faltantes..."
