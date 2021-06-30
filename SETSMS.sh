@@ -30,19 +30,17 @@ function Dependencies {
 		apk add python3
 		apk add py3-pip
 	fi
-	if [ -x ${pwd}/quack ]; then
+	if [ -x ${pwd}/quack.zip ]; then
 		RUTA=$(pwd)
 	else
 		echo -e "${rojo}Archivos faltantes..."
 		echo -e "Para reparar reinstale el producto"${negro}
-		rm -rf ISHSHELL-IOS-SMS/
 	fi
-	if [ -x ${pwd}/Impulse ]; then
+	if [ -x ${pwd}/Impulse.zip ]; then
 		RUTA=$(pwd)
 	else
 		echo -e "${rojo}Archivos faltantes..."
 		echo -e "Para reparar reinstale el producto"${negro}
-		rm -rf ISHSHELL-IOS-SMS/
 	fi
 }
 #
@@ -61,7 +59,6 @@ sleep 0.5
 #
 function SETSMS {
 	sleep 0.5
-	clear
 echo -e "${verde}
 ███████╗███████╗████████╗███████╗███╗   ███╗███████╗
 ██╔════╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║██╔════╝
