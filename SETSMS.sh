@@ -33,10 +33,28 @@ function Dependencies {
 	
 	echo -e ${rojo}"Iniciando..."${negro}	
 	elif [[ ${INSTALACION} == 2 || ${INSTALACION} == 02 ]]; then
+	
 		echo -e -n ""${blanco}
+		#Instalacion de python
 		apk update && apk upgrade
 		apk add python3
 		apk add py3-pip
+		
+		#quack
+		RUTA=$(pwd)
+		unzip quack.zip
+		rm quack.zip
+		cd ${RUTA}/quack
+		python3 -m pip install -r requirements.txt
+		cd ${RUTA}
+		
+		#Impulse
+		RUTA=$(pwd)
+		unzip Impulse.zip
+		rm Impulse.zip
+		cd ${RUTA}/Impulse
+		python3 -m pip install -r requirements.txt
+		cd ${RUTA}		
 		echo -e -n ""${negro}
 	else
 	echo -e ${rojo}"Saludos!!"${blanco}
