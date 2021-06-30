@@ -99,13 +99,13 @@ if [[ ${OPTION} == 0 || ${OPTION} == 00 ]]; then
 echo -e -n "" ${blanco}
 exit
 elif [[ ${OPTION} == 1 || ${OPTION} == 01 ]]; then
-source ${RUTA}/tools/target.sh
+source $(pwd)/tools/target.sh
 elif [[ ${OPTION} == 2 || ${OPTION} == 02 ]]; then
-source ${RUTA}/tools/save.sh
+source $(pwd)/tools/save.sh
 elif [[ ${OPTION} == 3 || ${OPTION} == 03 ]]; then
-source ${RUTA}/tools/spam.sh
+source $(pwd)/tools/spam.sh
 elif [[ ${OPTION} == 4 || ${OPTION} == 04 ]]; then
-source ${RUTA}/tools/list.sh
+source $(pwd)/tools/list.sh
 else
 Error
 Choose
