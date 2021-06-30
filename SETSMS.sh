@@ -25,8 +25,9 @@ function Dependencies {
 	echo -e ${rojo}"Ejecutar: 1"
 	echo -e "Instalar: 2"
 	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"
+	${blanco}
 	read -r INSTALACION
-	${negro}
+	echo ${negro}
 	
 	if [[ ${INSTALACION} == 1 || ${INSTALACION} == 01 ]]; then
 	
