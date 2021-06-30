@@ -2,8 +2,6 @@
 #
 # SETSMS: ISHSHELL IOS
 #
-# [Open Source] - [Código Abierto]
-#
 # Variables y Colores
 #
 PWD=$(pwd)
