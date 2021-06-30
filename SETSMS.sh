@@ -33,10 +33,11 @@ function Dependencies {
 	
 	echo -e ${rojo}"Iniciando..."${negro}	
 	elif [[ ${INSTALACION} == 2 || ${INSTALACION} == 02 ]]; then
-		
+		echo -e -n ""${blanco}
 		apk update && apk upgrade
 		apk add python3
 		apk add py3-pip
+		echo -e -n ""${negro}
 	else
 	echo -e ${rojo}"Saludos!!"${blanco}
 	exit
