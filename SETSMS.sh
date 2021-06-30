@@ -96,7 +96,7 @@ read -r OPTION
 sleep 0.5
 
 if [[ ${OPTION} == 0 || ${OPTION} == 00 ]]; then
-${blanco}
+echo ${blanco}
 exit
 elif [[ ${OPTION} == 1 || ${OPTION} == 01 ]]; then
 source ${RUTA}/tools/target.sh
