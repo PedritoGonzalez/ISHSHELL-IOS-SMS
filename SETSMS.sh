@@ -22,14 +22,14 @@ magenta='\033[1;35m'
 #
 function Dependencies {
 
-	echo -e ${blanco}"Ejecutar: 1"
+	echo -e ${rojo}"Ejecutar: 1"
 	echo -e "Instalar: 2"
-	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"
+	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"${negro}
 	read -r INSTALACION
 	
 	if [[ ${INSTALACION} == 1 || ${INSTALACION} == 01 ]]; then
 	
-	echo -e "Iniciando..."		
+	echo -e ${rojo}"Iniciando..."		
 	elif [[ ${INSTALACION} == 2 || ${INSTALACION} == 02 ]]; then
 		
 		apk update && apk upgrade
