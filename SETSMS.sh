@@ -25,7 +25,7 @@ function Dependencies {
 	echo -e ${rojo}"Ejecutar: 1"
 	echo -e "Instalar: 2"
 	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"
-	echo -e ${blanco}
+	echo -e ""${blanco}
 	read -r INSTALACION
 	echo -e ""${negro}
 	
