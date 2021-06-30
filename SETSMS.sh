@@ -22,25 +22,21 @@ magenta='\033[1;35m'
 #
 function Dependencies {
 
-	if [ -x /bin/python3 ]; then
-		RUTA=$(pwd)
-	else
-		RUTA=$(pwd)
+	echo -e ${blanco}"Ejecutar: 1"
+	echo -e "Instalar: 2"
+	echo -e "Nota: Si no funciona desinstale y vuelva a instalar"
+	read -r INSTALACION
+	
+	if [[ ${INSTALACION} == 1 || ${INSTALACION} == 01 ]]; then
+	
+	echo -e "Iniciando..."		
+	elif [[ ${INSTALACION} == 2 || ${INSTALACION} == 02 ]]; then
+		
 		apk update && apk upgrade
 		apk add python3
 		apk add py3-pip
-	fi
-	if [ -x ${pwd}/quack.zip ]; then
-		RUTA=$(pwd)
 	else
-		echo -e "${rojo}Archivos faltantes..."
-		echo -e "Para reparar reinstale el producto"${negro}
-	fi
-	if [ -x ${pwd}/Impulse.zip ]; then
-		RUTA=$(pwd)
-	else
-		echo -e "${rojo}Archivos faltantes..."
-		echo -e "Para reparar reinstale el producto"${negro}
+	
 	fi
 }
 #
