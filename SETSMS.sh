@@ -35,6 +35,7 @@ function Dependencies {
 	else
 		echo -e "${rojo}Archivos faltantes..."
 		echo -e "Reparando..."${negro}
+		rm -rf ISHSHELL-IOS-SMS/
 		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 	if [ -x ${PWD}/Impulse ]; then
@@ -42,6 +43,7 @@ function Dependencies {
 	else
 		echo -e "${rojo}Archivos faltantes..."
 		echo -e "Reparando..."${negro}
+		rm -rf ISHSHELL-IOS-SMS/
 		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 }
