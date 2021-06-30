@@ -36,7 +36,8 @@ function Dependencies {
 		apk add python3
 		apk add py3-pip
 	else
-	
+	echo -e "Saludos!!"
+	exit
 	fi
 }
 #
