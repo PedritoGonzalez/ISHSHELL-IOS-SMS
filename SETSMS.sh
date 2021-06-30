@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# SETSMS: (26/01/2021)
+# SETSMS: ISHSHELL IOS
 #
 # [Open Source] - [Código Abierto]
 #
@@ -23,64 +23,29 @@ magenta='\033[1;35m'
 # Dependencias del Script
 #
 function Dependencies {
-if [ "${OS}" == "Android" ]; then
-	if [ -x ${PREFIX}/bin/python ]; then
-		RUTA=$(pwd)
-	else
-		RUTA=$(pwd)
-		pkg update && pkg upgrade -y
-		pkg install python -y
-		pip install --upgrade pip
-	fi
-	if [ -x ${PWD}/quack ]; then
-		RUTA=$(pwd)
-	else
-		RUTA=$(pwd)
-		unzip quack.zip
-		rm quack.zip
-		cd ${RUTA}/quack
-		python3 -m pip install -r requirements.txt
-		cd ${RUTA}
-	fi
-	if [ -x ${PWD}/Impulse ]; then
-		RUTA=$(pwd)
-	else
-		RUTA=$(pwd)
-		unzip Impulse.zip
-		rm Impulse.zip
-		cd ${RUTA}/Impulse
-		python3 -m pip install -r requirements.txt
-		cd ${RUTA}
-	fi
-else
+
 	if [ -x /bin/python3 ]; then
 		RUTA=$(pwd)
 	else
 		RUTA=$(pwd)
-		apt-get update && apt-get upgrade -y
-		apt-get install python3 -y
+		apk update && apk upgrade
+		apk add python3
+		apk add py3-pip
 	fi
 	if [ -x ${PWD}/quack ]; then
 		RUTA=$(pwd)
 	else
-		RUTA=$(pwd)
-		unzip quack.zip
-		rm quack.zip
-		cd ${RUTA}/quack
-		python3 -m pip install -r requirements.txt
-		cd ${RUTA}
+		${blanco}Archivos faltantes...
+		${blanco}Reparando...
+		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
 	if [ -x ${PWD}/Impulse ]; then
 		RUTA=$(pwd)
 	else
-		RUTA=$(pwd)
-		unzip Impulse.zip
-		rm Impulse.zip
-		cd ${RUTA}/Impulse
-		python3 -m pip install -r requirements.txt
-		cd ${RUTA}
+		${blanco}Archivos faltantes...
+		${blanco}Reparando...
+		git clone https://github.com/PedritoGonzalez/ISHSHELL-IOS-SMS
 	fi
-fi
 }
 #
 # Mensaje de Opción Incorrecta
